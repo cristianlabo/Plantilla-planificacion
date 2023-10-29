@@ -1,13 +1,13 @@
 \documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
-codirector, % Uncomment to add a codirector to the title page
+%codirector, % Uncomment to add a codirector to the title page
 ]{charter} 
 
 
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Gestion de proyecto} 
+\titulo{Monitoreo de consumo eléctrico en viviendas y departamentos} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 %\posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -17,18 +17,18 @@ codirector, % Uncomment to add a codirector to the title page
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Cristian Matias Garcia} 
+\autor{Ing. Cristian Matias Garcia} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Patricio Bos}
-\pertenenciaDirector{GdP} 
+\director{Dr. Ing. Ariel Luthenberg}
+\pertenenciaDirector{FIUBA} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
-\codirector{Ariel Luthenberg} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
-\pertenenciaCoDirector{FIUBA}
+%\codirector{Ariel Luthenberg} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
+%\pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{ Patricio Bos}
+\empresaCliente{FIUBA}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
 \juradoUno{Nombre y Apellido (1)}
@@ -38,9 +38,9 @@ codirector, % Uncomment to add a codirector to the title page
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{30 de abril de 2021}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2021} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2022}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{17 de octubre de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{5 de diciembre de 2023} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{21 de agosto de 2024}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -92,7 +92,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de un calefón}, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un sistema IoT aplicado al  control de consumo eléctrico en viviendas y/o departamentos, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -100,10 +100,13 @@ Se adjunta a esta acta la planificación inicial.
 
 % Esta parte se construye sola con la información que hayan cargado en el preámbulo del documento y no debe modificarla
 \begin{table}[ht]
-\centering
+%\raggedleft
+\center
 \begin{tabular}{ccc}
-\begin{tabular}[c]{@{}c@{}}Dr. Ing. Ariel Lutenberg \\ Director posgrado FIUBA\end{tabular} & \hspace{2cm} & \begin{tabular}[c]{@{}c@{}}\clientename \\ \empclientename \end{tabular} \vspace{2.5cm} \\ 
-\multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \supname \\ Director del Trabajo Final\end{tabular}} \vspace{2.5cm} \\
+\begin{tabular}[c]{@{}c@{}} \supname \\ Director posgrado FIUBA\end{tabular} \hspace{2cm} & \begin{tabular}[c]{@{}c@{}}\clientename \\ \empclientename \end{tabular} 
+\vspace{10.5cm} \\ 
+%\hspace{2cm} \\ 
+%\multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \supname \\ Director del Trabajo Final\end{tabular}} \vspace{2.5cm} \\
 %\begin{tabular}[c]{@{}c@{}}\jurunoname \\ Jurado del Trabajo Final\end{tabular}     &  & \begin{tabular}[c]{@{}c@{}}\jurdosname\\ Jurado del Trabajo Final\end{tabular}  \vspace{2.5cm}  \\
 %\multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \jurtresname\\ Jurado del Trabajo Final\end{tabular}} \vspace{.5cm}                                                                     
 \end{tabular}
@@ -112,31 +115,49 @@ Se adjunta a esta acta la planificación inicial.
 
 
 
+
+
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
 
-\begin{consigna}{red} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección. En cada entrega parcial deben eliminar los comandos begin y end del bloque consigna de las secciones que hayan completado.
-
-El objetivo es que el lector en una o dos páginas entienda de qué trata el proyecto y cuáles son sus desafíos, cuál es la motivación para realizarlo y su importancia.
-
-Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cúal es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
-
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+El presente proyecto es un emprendimiento personal que tiene por finalidad implementar un sistema de monitoreo de consumo eléctrico en viviendas y departamentos en el siguiente contexto:
 
 \begin{itemize}
-	\item ¿Cuál es el contexto del proyecto, es un emprendimiento personal, un proyecto para una empresa, es parte del programa de vinculación con empresas del posgrado?
-	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
-	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está la solución que se propone?
-	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
-	\item ¿Por dónde pasa la innovación?
+
+	\item{El consumo ineficiente de energía eléctrica es uno de los grandes inconvenientes que se tiene en las viviendas de Argentina.
+	}
+	\item{La electricidad producida en las centrales eléctricas no permite cubrir la demanda eléctrica, provocando cortes en el suministro eléctrico.Por este motivo  las empresas encargadas de suministrar la electricidad, imponen penalidades para los usuarios que superen ciertos umbrales de consumo eléctrico.
+	}
+	\item{El usuario solo puede verificar el consumo eléctrico con un resumen electrónico mensual o por medio de la  inspección visual del medidor correspondiente a su domicilio.
+	}
 \end{itemize}
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y descripción funcional de la solución propuesta.
 
-Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''.  La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+En esta situación se plantean los siguientes inconvenientes:
+
+\begin{itemize}
+
+	\item{No se puede determinar cuál es el promedio de cada electrodoméstico, para evitar consumos innecesarios.
+	}
+	\item{Dos o más casas en un mismo domicilio no pueden saber el consumo eléctrico diferenciado.
+	}
+	\item{En edificios con luz de obra no se puede saber el consumo de cada vivienda o  dividir el gasto del consumo eléctrico.En la mayoría de los casos se toma el total de consumo y se divide sobre el total de las viviendas.
+	}
+	\item{En todos los casos se pierde el control del consumo eléctrico, provocando el uso ineficiente de la energía eléctrica, un mayor gasto económico para los usuarios y una distribución en el pago del servicio desproporcionada en el caso de compartir el mismo medidor eléctrico.
+	}
+\end{itemize}
+
+
+Para solucionar los inconvenientes antes mencionados, se propone un sistema de monitoreo que permita sensar el consumo eléctrico de los medidores/electrodomésticos dentro de un predio y que por medio de una aplicación IOT se pueda visualizar el consumo eléctrico. 
+
+La aplicación debe tener la posibilidad de configurar ciertas métricas (promedio, consumo diario,consumo por dispositivo, valor promedio) , alarmas de umbral eléctrico, informes sobre los cortes de suministro y consumos diferenciados por usuario.
+El relevamiento de consumo eléctrico permitirá evaluar la instalación de equipamientos de suministro eléctrico  con energías alternativas.
+
+
+Para la tareas antes mencionadas se implementara un red de sensores eléctricos que reporten a un nodo central el consumo eléctrico por bluetooth, este servidor se conectará a un servidor web por el protocolo MQTT , luego el servidor web permitirá guardar los datos en una base de datos para su posterior consumo/explotación por medio de la aplicación web
+Desde un dispositivo móvil por medio de la app web se conectará el usuario para  el monitoreo del consumo eléctrico de los dispositivos,configurar los mismos, setear alarmas de consumo,verificar cortes de consumo, calcular el precio de los consumos.
+En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que.... 
 
 \begin{figure}[htpb]
 \centering 
@@ -147,40 +168,69 @@ Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase 
 
 \vspace{25px}
 
-El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama, preferentemente en la gama de colores pastel.
+
+\begin{consigna}{red}
+
+
+Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cúal es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
+
+Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+
+\begin{itemize}
+	
+	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
+	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
+	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
+	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
+	\item ¿Por dónde pasa la innovación?
+\end{itemize}
+
 \end{consigna}
+
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} % este comando se debe borrar para la entrega, junto con la contraparte \end{consigna}{red} 
- 
-\textbf{Nota importante:} borrar esto y todas las consignas en color rojo antes de entregar este documento). Esto se hace eliminando el par de comandos que forman el bloque consigna, \verb!\begin{consigna}{red}! y \verb!\end{consigna}{red}! del código. 
+
+En el cuadro \ref{tab:interesados} se presentan los interesados en el proyecto. 
+
+\begin{table}[ht]
+\begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
+Auspiciante   & Ing. Martin Rodriguez                 &    Soft SA          	&       DBA 	\\ \hline
+Cliente       & \clientename      &\empclientename	&   Profesor FIUBA     	\\ \hline
+Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
+Colaboradores &   Sr. Gabriel Garcia                &              	&    Desempleado    	\\ \hline
+Orientador    & \supname & \pertesupname 	& Director Trabajo final \\ \hline
+Equipo        &  Ing. Guillermo Tala          			  &   Soft SA               		      &   Desarrollador  	\\ \hline
+Usuario final &  Sra. Ana Alvarez                 &              	&       Jubilada 	\\ \hline
+\end{tabularx}
+\caption{Identificación de los interesados}
+\label{tab:interesados}
+\end{table}
+
+\vspace{25px}
+
+\begin{itemize}
+	\item Auspiciante: esta interesado y dispuesto a gastar dinero para el proyecto.
+	\item Cliente: Tiene experiencia previa en planificación, va a poder ayudar con la definición de los requerimientos y demás detalles. 
+	\item Responsable: 
+	\item Colaboradores: Esta desempleado y tiene el tiempo suficiente para comprar los materiales necesarios.Va a poder ayudar mucho en cuestiones de logística.
+	\item Orientador: Es el especialista en esta tecnología, a tener en cuenta  a la hora de evaluar alternativas.
+	\item Equipo: Es especialista en desarrollo desde hace varios años. Tiene poco tiempo extra laboral.Planificar considerando esto.
+	\item Usuario Final: Tiene la necesidad de probar el proyecto por motivos económicos. 
+\end{itemize}
+
+
+\begin{consigna}{red} 
  
 Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. Si se considera que una persona cumple dos o más roles, entonces solo dejarla en el rol más importante. 
 
 Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente. Si una persona es el Responsable, no debe ser colocado también como miembro del equipo.
 
 
-\begin{table}[ht]
-%\caption{Identificación de los interesados}
-%\label{tab:interesados}
-\begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
-\hline
-\rowcolor[HTML]{C0C0C0} 
-Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
-Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
-Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
-\end{tabularx}
-\end{table}
 
 El Director suele ser uno de los Orientadores.
 
@@ -204,40 +254,56 @@ Por ejemplo:
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
 
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
-\end{consigna}
+El propósito de este proyecto es implementar un sistema IoT para monitorear el consumo eléctrico en viviendas y departamentos en un mismo predio.
+Se pretende aplicar los conocimientos adquiridos para la gestión del proyecto y el diseño del sistema IoT en todas sus etapas.
+
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+El presente proyecto incluye:
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
+\begin{itemize}
+\item{Desarrollo de la aplicacion IoT(frontend,backend, base de datos).}
+\item{Desarrollo de firmware para módulos sensor y transmisor }
+\item{Desarrollo de un prototipo  del modulo sensor en protoboard o placa perforada}
+\item{Desarrollo de un prototipo del modulo transmisor(interface sensores e internet) en protoboard o placa perforada}
+\end{itemize}
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
 
-\end{consigna}
+
+
+El presente proyecto no incluye:
+
+\begin{itemize}
+\item{La construcción y/o adaptación del PCB para los módulos sensor y transmisor.}
+\item{La construcción y/o adaptación de un gabinete para los módulos sensor y transmisor.}
+\item{El desarrollo de una aplicación de celular para sistemas android o similares}
+\end{itemize}
+
+
 
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+
+Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-	\item Supuesto 1
-	\item Supuesto 2...
+\item{El modulo ESP32 tiene suficientes recursos para la implementación de este sistema.}
+\item{Se conseguirán los materiales necesarios en el mercado local.}
+\item{El diseño y desarrollo de código se realizará en tiempo y forma.}
+\item{No se presentarán retrasos debidos a problemas de hardware, por ejemplo, en el diseño e implementación de los módulos sensor y transmisor.}
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
+
+
+
+
+
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
