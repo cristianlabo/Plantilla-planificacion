@@ -121,15 +121,16 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 
-El presente proyecto es un emprendimiento personal que tiene por finalidad implementar un sistema de monitoreo de consumo eléctrico en viviendas y departamentos en el siguiente contexto:
+El presente proyecto es un emprendimiento personal que implementara implementar un sistema de monitoreo de consumo eléctrico en viviendas y departamentos.
+El proyecto  se desarrollara en el siguiente contexto:
 
 \begin{itemize}
 
-	\item{El consumo ineficiente de energía eléctrica es uno de los grandes inconvenientes que se tiene en las viviendas de Argentina.
+	\item{El consumo ineficiente de energía eléctrica en las viviendas de Argentina.
 	}
-	\item{La electricidad producida en las centrales eléctricas no permite cubrir la demanda eléctrica, provocando cortes en el suministro eléctrico.Por este motivo  las empresas encargadas de suministrar la electricidad, imponen penalidades para los usuarios que superen ciertos umbrales de consumo eléctrico.
+	\item{La electricidad producida en las centrales eléctricas no permite cubrir la demanda eléctrica y provoca cortes en el suministro eléctrico de las viviendas. Debido a la demanda eléctrica las empresas imponen penalidades para los usuarios que superan ciertos umbrales de consumo eléctrico.
 	}
-	\item{El usuario solo puede verificar el consumo eléctrico con un resumen electrónico mensual o por medio de la  inspección visual del medidor correspondiente a su domicilio.
+	\item{El usuario solo puede verificar el consumo eléctrico con el resumen electrónico mensual y por inspección visual en el medidor de su domicilio.
 	}
 \end{itemize}
 
@@ -138,55 +139,69 @@ En esta situación se plantean los siguientes inconvenientes:
 
 \begin{itemize}
 
-	\item{No se puede determinar cuál es el promedio de cada electrodoméstico, para evitar consumos innecesarios.
+	\item{No se puede determinar cuál es el promedio de cada electrodoméstico y evitar consumos innecesarios.
 	}
-	\item{Dos o más casas en un mismo domicilio no pueden saber el consumo eléctrico diferenciado.
+	\item{Dos o más casas, dentro de un mismo domicilio, no pueden saber el consumo eléctrico correspondiente a cada una.
 	}
-	\item{En edificios con luz de obra no se puede saber el consumo de cada vivienda o  dividir el gasto del consumo eléctrico.En la mayoría de los casos se toma el total de consumo y se divide sobre el total de las viviendas.
+	\item{En edificios con luz de obra no se puede saber el consumo de cada vivienda o  dividir el gasto del consumo eléctrico. Para los edificios se toma el total de consumo y se divide sobre el total de las viviendas.
 	}
-	\item{En todos los casos se pierde el control del consumo eléctrico, provocando el uso ineficiente de la energía eléctrica, un mayor gasto económico para los usuarios y una distribución en el pago del servicio desproporcionada en el caso de compartir el mismo medidor eléctrico.
+	\item{Se pierde el control del consumo eléctrico.
+	}
+	\item{Se produce el uso ineficiente de la energía eléctrica eléctrica.
+	}
+	\item{La distribución desproporcionada en el pago del servicio  para los casos donde se comparte un mismo medidor eléctrico.
 	}
 \end{itemize}
 
 
-Para solucionar los inconvenientes antes mencionados, se propone un sistema de monitoreo que permita sensar el consumo eléctrico de los medidores/electrodomésticos dentro de un predio y que por medio de una aplicación IOT se pueda visualizar el consumo eléctrico. 
+Para solucionar los inconvenientes antes mencionados se propone un sistema IoT  que permita monitorear el consumo eléctrico de los medidores/electrodomésticos en un domicilio. 
 
-La aplicación debe tener la posibilidad de configurar ciertas métricas (promedio, consumo diario,consumo por dispositivo, valor promedio) , alarmas de umbral eléctrico, informes sobre los cortes de suministro y consumos diferenciados por usuario.
+La aplicación debe tener la posibilidad de configurar ciertas métricas (promedio, consumo diario,consumo por dispositivo, valor promedio,etc) , alarmas de umbral eléctrico, informes sobre los cortes de suministro y consumos para cada usuario.
 El relevamiento de consumo eléctrico permitirá evaluar la instalación de equipamientos de suministro eléctrico  con energías alternativas.
 
 
-Para la tareas antes mencionadas se implementara un red de sensores eléctricos que reporten a un nodo central el consumo eléctrico por bluetooth, este servidor se conectará a un servidor web por el protocolo MQTT , luego el servidor web permitirá guardar los datos en una base de datos para su posterior consumo/explotación por medio de la aplicación web
-Desde un dispositivo móvil por medio de la app web se conectará el usuario para  el monitoreo del consumo eléctrico de los dispositivos,configurar los mismos, setear alarmas de consumo,verificar cortes de consumo, calcular el precio de los consumos.
-En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que.... 
+El sistema IoT se compone de las siguientes partes:
+
+\begin{itemize}
+\item{Una red de sensores eléctricos, definidos como módulos sensores, que reporta a un nodo central el consumo eléctrico por bluetooth.
+	}
+\item{Un nodo central, definido como modulo transmisor, que se conecta a la red de sensores y a un servidor web por el protocolo MQTT, .
+	}
+\item{Un servidor IoT que guarda los datos en una base de datos, responde a las peticiones del nodo central y a un cliente de la pagina web.
+	}
+	
+\end{itemize}
+
+
+
+
+En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. 
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.5\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=.8\textwidth]{./Figuras/diagBloques.png}
 \caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
 
-
-\begin{consigna}{red}
-
-
-Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cúal es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
-
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+El usuario final conectado desde un dispositivo móvil podrá:
 
 \begin{itemize}
-	
-	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
-	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
-	\item ¿Por dónde pasa la innovación?
+\item{Verificar el consumo eléctrico de la red de dispositivos.
+	}
+\item{Configurar alarmas de exceso de consumo.
+	}
+\item{Verificar cortes en el consumo eléctrico.
+	}
+\item{Calcular el precio diferenciado por fecha y dispositivos.  
+	}
 \end{itemize}
 
-\end{consigna}
 
+
+\newpage
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
@@ -194,7 +209,7 @@ Puede ser útil incluir en esta sección la respuesta a alguna de estas pregunta
 
 En el cuadro \ref{tab:interesados} se presentan los interesados en el proyecto. 
 
-\begin{table}[ht]
+\begin{table}[htbp]
 \begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -211,43 +226,20 @@ Usuario final &  Sra. Ana Alvarez                 &              	&       Jubila
 \label{tab:interesados}
 \end{table}
 
-\vspace{25px}
+\vspace{20px}
+
+Se describen las características de los interesados en el proyecto:
 
 \begin{itemize}
-	\item Auspiciante: esta interesado y dispuesto a gastar dinero para el proyecto.
-	\item Cliente: Tiene experiencia previa en planificación, va a poder ayudar con la definición de los requerimientos y demás detalles. 
-	\item Responsable: 
-	\item Colaboradores: Esta desempleado y tiene el tiempo suficiente para comprar los materiales necesarios.Va a poder ayudar mucho en cuestiones de logística.
-	\item Orientador: Es el especialista en esta tecnología, a tener en cuenta  a la hora de evaluar alternativas.
-	\item Equipo: Es especialista en desarrollo desde hace varios años. Tiene poco tiempo extra laboral.Planificar considerando esto.
-	\item Usuario Final: Tiene la necesidad de probar el proyecto por motivos económicos. 
+	\item Auspiciante: esta dispuesto a gastar dinero para el proyecto.
+	\item Cliente: tiene experiencia previa en planificación, va a poder ayudar con la definición de los requerimientos y demás detalles. 
+	\item Responsable: tiene la responsabilidad y el interes suficiente para terminar el proyecto.
+	\item Colaboradores: esta desempleado y tiene el tiempo suficiente para comprar los materiales necesarios, va a poder ayudar mucho en cuestiones de logística.
+	\item Orientador: es el especialista en esta tecnología.Se puede tener en cuenta  a la hora de evaluar alternativas.
+	\item Equipo: Es especialista en desarrollo desde hace varios años. Planificar considerando que tiene poco tiempo extra laboral.
+	\item Usuario Final: tiene la necesidad de probar el proyecto, por motivos económicos.
 \end{itemize}
 
-
-\begin{consigna}{red} 
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. Si se considera que una persona cumple dos o más roles, entonces solo dejarla en el rol más importante. 
-
-Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente. Si una persona es el Responsable, no debe ser colocado también como miembro del equipo.
-
-
-
-El Director suele ser uno de los Orientadores.
-
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
-\begin{itemize}
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-	\item Orientador: María Gómez va a poder ayudar mucho con la definición de los requerimientos.
-\end{itemize}
-
-\end{consigna} % este comando se debe borrar para la entrega, junto con la contraparte \begin{consigna}{red}
 
 
 
@@ -255,8 +247,8 @@ Por ejemplo:
 \label{sec:proposito}
 
 
-El propósito de este proyecto es implementar un sistema IoT para monitorear el consumo eléctrico en viviendas y departamentos en un mismo predio.
-Se pretende aplicar los conocimientos adquiridos para la gestión del proyecto y el diseño del sistema IoT en todas sus etapas.
+El propósito de este proyecto es implementar un sistema IoT para monitorear el consumo eléctrico en viviendas y departamentos de un mismo predio.
+Se pretende aplicar los conocimientos adquiridos para la gestión del proyecto y el diseño del sistema en todas sus etapas.
 
 
 \section{4. Alcance del proyecto}
@@ -268,8 +260,8 @@ El presente proyecto incluye:
 \begin{itemize}
 \item{Desarrollo de la aplicacion IoT(frontend,backend, base de datos).}
 \item{Desarrollo de firmware para módulos sensor y transmisor }
-\item{Desarrollo de un prototipo  del modulo sensor en protoboard o placa perforada}
-\item{Desarrollo de un prototipo del modulo transmisor(interface sensores e internet) en protoboard o placa perforada}
+\item{Desarrollo de un prototipo  para el modulo sensor en protoboard o placa perforada}
+\item{Desarrollo de un prototipo para el modulo transmisor(interface sensores e internet) en protoboard o placa perforada}
 \end{itemize}
 
 
