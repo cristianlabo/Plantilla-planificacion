@@ -71,6 +71,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
  0      & Creación del documento                                 & 17/10/2023 \\ \hline
 1.0      & Se completa hasta el punto 5 inclusive                & 31/10/2023 \\ \hline
 2.0      & Se completa hasta el punto 9 inclusive, con correcciones de la version 1.0               & 07/11/2023 \\ \hline
+3.0      & Se completa hasta el punto 12 inclusive, con correcciones de la version 2.0               & 14/11/2023 \\ \hline
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -93,7 +94,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un sistema IoT aplicado al  control de consumo eléctrico en viviendas y/o departamentos, y tendrá un presupuesto preliminar estimado de 508 h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un sistema IoT aplicado al  control de consumo eléctrico en viviendas y/o departamentos, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -122,7 +123,7 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 
-El presente proyecto es un emprendimiento personal que implementara un sistema de monitoreo de consumo eléctrico en viviendas y departamentos.
+El presente proyecto es un emprendimiento personal que implementará un sistema de monitoreo de consumo eléctrico en viviendas y departamentos.
 El proyecto  se desarrollara en el siguiente contexto:
 
 \begin{itemize}
@@ -214,8 +215,8 @@ En el cuadro \ref{tab:interesados} se presentan los interesados en el proyecto.
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   & Ing. Martin Rodriguez                 &    Soft SA          	&       DBA 	\\ \hline
-%Cliente       & \clientename      &\empclientename	&   Profesor FIUBA     	\\ \hline
+%Auspiciante   & Ing. Martin Rodriguez                 &    Soft SA          	&       DBA 	\\ \hline
+Cliente       & \clientename      &\empclientename	&       	Director Trabajo final\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Colaboradores &   Sr. Gabriel Garcia                &              	&    Desempleado    	\\ \hline
 Orientador    & \supname & \pertesupname 	& Director Trabajo final \\ \hline
@@ -232,10 +233,10 @@ Se describen las características de los interesados en el proyecto:
 
 \begin{itemize}
 %	\item Auspiciante: esta dispuesto a gastar dinero para el proyecto.
-%	\item Cliente: tiene experiencia previa en planificación, va a poder ayudar con la definición de los requerimientos y demás detalles. 
+	\item Cliente: tiene experiencia previa en planificación, va a poder ayudar con la definición de los requerimientos y demás detalles. 
 	\item Responsable: tiene la responsabilidad y el interes suficiente para terminar el proyecto.
 	\item Colaboradores: esta desempleado y tiene el tiempo suficiente para comprar los materiales necesarios, va a poder ayudar mucho en cuestiones de logística.
-	\item Orientador: es el especialista en esta tecnología.Se puede tener en cuenta  a la hora de evaluar alternativas.Cumple el rol de auspiciante y cliente ayudando en cuestiones economicas, como también en establecer requerimientos del proyecto.
+	\item Orientador: es el especialista en esta tecnología.Se puede tener en cuenta  a la hora de evaluar alternativas.Cumple el rol de auspiciante y cliente ayudando en cuestiones económicas.
 	\item Equipo: Es especialista en desarrollo desde hace varios años. Planificar considerando que tiene poco tiempo extra laboral.
 	\item Usuario Final: tiene la necesidad de probar el proyecto, por motivos económicos.
 \end{itemize}
@@ -306,7 +307,7 @@ Se detallan los requerimientos necesarios dentro del proyecto:
 \begin{enumerate}
 	\item Requerimientos funcionales
 		\begin{enumerate}
-			\item El sistema debe ser capaz de medir el consumo eléctrico por hora, día , semana y mes.
+			\item El sistema debe ser capaz de medir el consumo eléctrico por hora, día, semana y mes.
 			\item El modulo sensor y el modulo transmisor deben ser alimentados con la tension nominal de 220 Vac o en su defecto por una batería de 9 Vdc.
 			\item El sistema debe ser capaz de monitorear el consumo del mismo dispositivo de medición.
 			\item El dispositivo funcional debe poder trabajar en un rango de temperatura ambiente de 0°C a 50°C .
@@ -321,11 +322,13 @@ Se detallan los requerimientos necesarios dentro del proyecto:
 			\item La documentación debe contar con  un diagrama de la aplicación.
 			\item La documentación debe contar con un manual de uso.
 			\item La documentación debe contar con un manual de instalación.
+			\item Informe de avance de proyecto.
+			\item Memoria técnica del proyecto.
 		\end{enumerate}
 		
 	\item Requerimiento de testing
 		\begin{enumerate}
-			\item Se deben realizar pruebas de consumo eléctrico en un domicilio, con al menos dos dispositivos sensores por el periodo de una semana.
+			\item Se deben realizar pruebas de consumo eléctrico en un domicilio, con al menos dos dispositivos sensores por el período de una semana.
 			\item Se deben contrastar las pruebas de consumo eléctrico con el medidor eléctrico del domicilio.
 			\item Se debe controlar la correcta activación de las alarmas por exceso de consumo.
 			\item Se debe controlar el correcto funcionamiento del dispositivo ante cortes en el suministro eléctrico.
@@ -334,7 +337,7 @@ Se detallan los requerimientos necesarios dentro del proyecto:
 	\item Requerimientos de la interfaz
 		\begin{enumerate}
 			\item El usuario debe poder configurar y visualizar alarmas por exceso de consumo eléctrico.
-			\item El usuario debe poder seleccionar y visualizar el consumo eléctrico general por hora, día , semana y mes.
+			\item El usuario debe poder seleccionar y visualizar el consumo eléctrico general por hora, día, semana y mes.
 			\item El usuario debe poder seleccionar y visualizar el consumo eléctrico general promedio.
 			\item El usuario debe poder seleccionar y visualizar el consumo eléctrico sensado por cada dispositivo.
 			\item El usuario debe poder visualizar los cortes de suministro eléctrico.
@@ -362,7 +365,7 @@ Las historias de usuario para el proyecto son las siguientes:
 \item{Como administrador  de un departamento necesito saber el consumo eléctrico mensual de cada domicilio para distribuir los gastos equitativamente sobre los inquilinos.}
 
 
-Dificultad: media (3) → porque necesita mas dispositivos conectados en un mismo tablero.
+Dificultad: media (3) → Porque necesita mas dispositivos conectados en un mismo tablero.
 
 Complejidad: baja (1) → Seria la misma implementación que para pocos dispositivos.
 
@@ -376,7 +379,7 @@ Story Point: 8
 \item{Como dueño de esta vivienda diariamente necesito saber  si estoy excediendo  el consumo eléctrico de una vivienda tipo, para no incurrir en multas o penalidades.
 }
 
-Dificultad: alta (5) → porque necesita saber los limites de consumo eléctrico de cada empresa para cada mes.
+Dificultad: alta (5) → Porque necesita saber los limites de consumo eléctrico de cada empresa para cada mes.
 
 Complejidad: baja (1) → Se podría implementar un alerta automático para el cambio de los limites de consumo por mes. 
 
@@ -389,7 +392,7 @@ Story Point: 13
 \item{Como inquilino me gustaría saber el consumo eléctrico de los electrodomésticos de mi casa para evaluar el remplazo u otra alternativa.
 }
 
-Dificultad: media (3) → porque necesita mas dispositivos conectados.
+Dificultad: media (3) → Porque necesita más dispositivos conectados.
 
 Complejidad: baja (1) → Seria el mismo sistema con mas dispositivos conectados.
 
@@ -402,11 +405,11 @@ Story Point: 13
 \item{Como propietario deseo ver desde el celular los consumos eléctricos para no registrar un control manualmente desde el medidor.}
 
 
-Dificultad: baja (1) → porque necesita un solo dispositivo conectado al tablero.
+Dificultad: baja (1) → Porque necesita un solo dispositivo conectado al tablero.
 
-Complejidad: baja (1) → La implementación mas sencilla del sistema.
+Complejidad: baja (1) → La implementación más sencilla del sistema.
 
-Riesgo: baja (1) → Solo requiere de la implementación de un solo dispositivo.
+Riesgo: baja (1) → Solo requiere de la implementación de un dispositivo.
 
 Story Point: 3 
 
@@ -415,7 +418,7 @@ Story Point: 3
 \item{Como desarrollador deseo implementar la infraestructura de la aplicación en la nube para hacer mas escalable la aplicación.}
 
 
-Dificultad: media (3) → porque se necesitan conocimientos técnicos para la implementación en la nube para no incurrir en gastos innecesarios.
+Dificultad: media (3) → Porque se necesitan conocimientos técnicos para la implementación en la nube para no incurrir en gastos innecesarios.
 
 Complejidad: alta (5) → Es un arquitectura relativamente compleja.
 
@@ -439,14 +442,14 @@ Los entregables del proyecto son :
 \begin{itemize}
 	
 	\item Esquemáticos del circuito para el modulo sensor y modulo transmisor.
-	\item Código fuente del firmware en codigo C, diseñado para la placa ESP32
-	\item Diagrama de la aplicación	IoT
-	\item Código fuente de la aplicación IoT
-	\item Prototipo funcional verificado	
-	\item Manual de instalación
-	\item Manual de uso
-	\item Informe final
-	
+	\item Código fuente del firmware en codigo C, diseñado para la placa ESP32.
+	\item Diagrama de la aplicación	IoT.
+	\item Código fuente de la aplicación IoT.
+	\item Prototipo funcional verificado.	
+	\item Manual de instalación.
+	\item Manual de uso.
+	\item Informe de avance del proyecto.
+	\item Memoria técnica del proyecto.
 \end{itemize}
 
 
@@ -464,46 +467,46 @@ Las tareas a realizar son las siguientes:
 	\item Investigación sobre librerías existentes de la placa ESP32. (8 hs)
 	\item Investigación sobre aplicaciones implementadas en la nube. (8 hs)
 	\end{enumerate}
-\item Materiales necesarios. (28 hs)
+\item Materiales necesarios. (44 hs)
 	\begin{enumerate}
-	\item Identificar los proveedores para los materiales necesarios. (8 hs)
-	\item Comprar los materiales.(6 hs)
-	\item Identificar los proveedores de servicios en la nube. (8 hs)
-	\item Contratar servicios en la nube. (6 hs)
+	\item Identificar los proveedores para los materiales necesarios. (12 hs)
+	\item Comprar los materiales.(12 hs)
+	\item Identificar los proveedores de servicios en la nube. (12 hs)
+	\item Contratar servicios en la nube. (8 hs)
 	\end{enumerate}
-\item Desarrollo de hardware. (76 hs)
+\item Desarrollo de hardware. (104 hs)
 	\begin{enumerate}
-	\item Diseño de circuito esquemático en protoboard. (20 hs)
-	\item Implementación en protoboard. (20 hs)
-	\item Diseño de circuito en placa perforada. (10 hs)
-	\item Implementación en placa perforada.(10 hs)
-	\item Primer chequeo del funcionamiento de los modulos. (8 hs)
-	\item Correcciones en el circuito. (8 hs)
+	\item Diseño de circuito esquemático en protoboard. (36 hs)
+	\item Implementación en protoboard. (24 hs)
+	\item Diseño de circuito en placa perforada. (12 hs)
+	\item Implementación en placa perforada.(16 hs)
+	\item Pruebas individuales del funcionamiento de los módulos. (8 hs)
+	\item Pruebas de interconexión entre los módulos. (8 hs)
 	\end{enumerate}
 \item Desarrollo de firmware. (68 hs)
 	\begin{enumerate}
 	\item Confección del diagrama de bloques del código. (8 hs)
-	\item Desarrollo de código C para la comunicación UART(Bluetooth). (12 hs)
+	\item Desarrollo de código C para la comunicación UART (Bluetooth). (12 hs)
 	\item Desarrollo de código C para la comunicación MQTT.	(12 hs)
 	\item Desarrollo de código para consumo de batería.	(12 hs)
-	\item Primer chequeo del funcionamiento del firmware.(8 hs)
-	\item Correcciones en el funcionamiento del firmware.(16 hs)
+	\item Pruebas individuales del funcionamiento del firmware de comunicación. (8 hs)
+	\item Pruebas de interconexión del firmware. (16 hs)
 	\end{enumerate}
-\item Desarrollo de aplicación. (116 hs)
+\item Desarrollo de aplicación. (124 hs)
 	\begin{enumerate}
 	\item Confección de un diagrama de la aplicación IoT. (8 hs)
 	\item Confección de un diagrama en bloques del código. (8 hs)
-	\item Desarrollo de código frontend. (36 hs)
-	\item Desarrollo de código backend. (36 hs)
+	\item Desarrollo del código frontend. (36 hs)
+	\item Desarrollo del código backend. (36 hs)
 	\item Integración de la aplicación en la nube. (12 hs)
-	\item Primer chequeo del funcionamiento de la  aplicación. (8 hs)
-	\item Correcciones en el funcionamiento de la  aplicación. (16 hs)
+	\item Pruebas individuales del funcionamiento del backend y frontend. (8 hs)
+	\item Pruebas de interconexión del backend y frontend. (16 hs)
 	\end{enumerate}
 
-\item Etapa de integración. (32 hs)
+\item Etapa de integración. (48 hs)
 	\begin{enumerate}
-	\item Integración de software y  hardware. (16 hs)
-	\item Correcciones generales de software y  hardware. (16 hs)
+	\item Integración de software y  hardware. (24 hs)
+	\item Pruebas generales de software y  hardware. (24 hs)
 	\end{enumerate}
 	
 \item Testing del proyecto. (36 hs)
@@ -512,7 +515,7 @@ Las tareas a realizar son las siguientes:
 	\item Pruebas de consumo eléctrico en un domicilio.	(4 hs)
 	\item Pruebas del dispositivo ante cortes de suministro eléctrico.	(4 hs)
 	\item Pruebas del sistema de alarmas del dispositivo. (4 hs)
-	\item Correcciones generales del sistema. (16 hs)
+	\item Pruebas de duración de la batería. (16 hs)
 	\end{enumerate}
 	
 \item Verificación del prototipo. (8 hs)
@@ -520,21 +523,22 @@ Las tareas a realizar son las siguientes:
 	\item Verificación de la interfaz de usuario. (8 hs)
 	\end{enumerate}	
 	
-\item Documentación. (104 hs)
+\item Documentación. (128 hs)
 	\begin{enumerate}
 	\item Documentación de esquemáticos.(8 hs)
 	\item Documentación del código C. (16 hs)
 	\item Documentación de la aplicación IoT. (16 hs)
 	\item Documentación del manual de instalación. (16 hs)
 	\item Documentación del manual de uso. (16 hs)
-	\item Documentación del informe final. (32 hs)
+	\item Informe de avance del proyecto. (24 hs)
+	\item Memoria técnica del proyecto. (32 hs)
 
 	\end{enumerate}
 
 
 \end{enumerate}
 
-Cantidad total de horas: (508 hs)
+Cantidad total de horas: (600 hs)
 
 
 
