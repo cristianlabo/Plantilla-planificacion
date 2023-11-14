@@ -308,7 +308,7 @@ Se detallan los requerimientos necesarios dentro del proyecto:
 	\item Requerimientos funcionales
 		\begin{enumerate}
 			\item El sistema debe ser capaz de medir el consumo eléctrico por hora, día, semana y mes.
-			\item El modulo sensor y el modulo transmisor deben ser alimentados con la tension nominal de 220 Vac o en su defecto por una batería de 9 Vdc.
+			\item El modulo sensor y el modulo transmisor deben ser alimentados con la tension nominal de 220 Vac o en su defecto por una batería de 12 Vdc.
 			\item El sistema debe ser capaz de monitorear el consumo del mismo dispositivo de medición.
 			\item El dispositivo funcional debe poder trabajar en un rango de temperatura ambiente de 0°C a 50°C .
 			\item El dispositivo funcional debe poder trabajar en un rango de corriente de 0 a 25 A .
@@ -525,7 +525,7 @@ Las tareas a realizar son las siguientes:
 	
 \item Documentación. (128 hs)
 	\begin{enumerate}
-	\item Documentación de esquemáticos.(8 hs)
+	\item camino critico marcado con tareas de color rojo y en trazo grueso de color negro. Un total de 348 hs.
 	\item Documentación del código C. (16 hs)
 	\item Documentación de la aplicación IoT. (16 hs)
 	\item Documentación del manual de instalación. (16 hs)
@@ -540,31 +540,33 @@ Las tareas a realizar son las siguientes:
 
 Cantidad total de horas: (600 hs)
 
-
+\newpage
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
 
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
-
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
-
-\end{consigna}
+Se puede ver el AON en la figura \ref{fig:AoN}:
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=1.1\textwidth]{./Figuras/AONProyecto.pdf}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
 
+Observando  la figura  \ref{fig:AoN} se determinan las siguientes cuestiones:
+
+\begin{itemize}
+
+	\item El camino critico es marcado con las tareas de color rojo,  flechas de color negro y trazo grueso. La cantidad de horas para finalizar el proyecto por el camino critico es de 348 hs.
+	\item El desarrollo de la aplicación marcado en azul puede demorarse hasta 94 hs respecto del camino critico.
+	\item El desarrollo de las tareas de integración, testing del proyecto y verificación del proyecto marcado en verde puede demorarse hasta 36 hs respecto del camino critico.
+	
+
+\end{itemize}
+	
 
 
 \section{11. Diagrama de Gantt}
