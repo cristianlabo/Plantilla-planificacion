@@ -94,7 +94,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un sistema IoT aplicado al  control de consumo eléctrico en viviendas y/o departamentos, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un sistema IoT aplicado al  control de consumo eléctrico en viviendas y/o departamentos, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \$ 2444000, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -432,6 +432,13 @@ Story Point: 13
 \end{itemize}
 
 
+Para el calculo de los story points se consideraron los siguientes criterios:
+
+\begin{itemize}
+\item Se asigno valores de la serie de fibonacci, de acuerdo a la severidad 1 baja, 3 media y 5 alta.
+\item Se sumaron los valores de dificultad, complejidad y riesgo para aproximar al numero de la serie de fibonacci mas alto( criterio para no subestimar ) y se asigno ese valor a la story point.
+\end{itemize}
+
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
@@ -572,72 +579,37 @@ Observando  la figura  \ref{fig:AoN} se determinan las siguientes cuestiones:
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
+En la figura \ref{fig:gantt}, se muestra el diagrama de Gantt del proyecto construido en gantter:
 
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
 
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de Gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de Gantt de ejemplo}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[height=.17\textheight]{./Figuras/ganttProyecto.pdf}
+\caption{Diagrama de Gantt del proyecto}
 \label{fig:gantt}
 \end{figure}
 
+Para construir el diagrama de gantt del proyecto se realizaron las siguientes consideraciones:
 
-\begin{landscape}
-\begin{figure}[htpb]
-\centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt rotado}
-\label{fig:diagGantt}
-\end{figure}
+\begin{itemize}
+\item Se establecen  2.5 h de trabajo diario por tarea.
+\item Se establecen  los días laborables de lunes a viernes.
+\item Se establecen  los días no laborables los sábados y domingos.
+\item El camino critico es el establecido en color rojo.
+\item El proyecto empieza el día 02/01/2024 y finaliza el 02/08/2024.
+\item Se tomaron los grupos de tareas generales para confeccionar el diagrama, dado que las tareas internas al grupo de tareas son secuenciales, como por ejemplo  la Etapa de integración compuesta por las tareas ``Integración de software y harware"                                      ,``Pruebas generales de software y  hardware".
+\end{itemize}
 
-\end{landscape}
-
-\end{consigna}
 
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
 
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
 
-\end{consigna}
+En el cuadro \ref{tab:costos} se presentan los costos del proyecto. 
+
+
 
 \begin{table}[htpb]
 \centering
@@ -650,24 +622,25 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+  
+  \multicolumn{1}{|l|}{Horas de ingeniería}  &
+  \multicolumn{1}{c|}{600 h} &
+  \multicolumn{1}{c|}{3000 \$} &
+  \multicolumn{1}{c|}{1200000 \$} \\ \hline
+ 
+ \multicolumn{1}{|l|}{Materiales}  &
+  \multicolumn{1}{c|}{2 prototipos} &
+  \multicolumn{1}{c|}{100000 \$} &
+  \multicolumn{1}{c|}{200000 \$} \\ \hline
+  
+  \multicolumn{1}{|l|}{Servicios en la Nube}  &
+  \multicolumn{1}{c|}{6 meses} &
+  \multicolumn{1}{c|}{17000 \$} &
+  \multicolumn{1}{c|}{102000 \$} \\ \hline
+
+  
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{1502000 \$} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -675,25 +648,39 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+
+
+\multicolumn{1}{|l|}{Viaticos}  &
+  \multicolumn{1}{c|}{154 d} &
+  \multicolumn{1}{c|}{3000 \$} &
+  \multicolumn{1}{c|}{462000 \$} \\ \hline
+  
+\multicolumn{1}{|l|}{Alquiler de taller}  &
+ \multicolumn{1}{c|}{8 meses} &
+  \multicolumn{1}{c|}{60000 \$} &
+  \multicolumn{1}{c|}{480000 \$} \\ \hline
+  
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{942000 \$} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
+\multicolumn{1}{c|}{2444000 \$} 
    \\ \hline
 \end{tabularx}%
+\caption{Cuadro de costos.}
+\label{tab:costos}
 \end{table}
+
+
+Para construir el cuadro \ref{tab:costos} del proyecto se realizaron las siguientes consideraciones:
+
+\begin{itemize}
+\item Horas de ingeniería, se calculo respecto del sueldo  mensual  $\frac{720000}{30\  dias\ \* 8\ h } \approx 3000\$ $
+\item Materiales, se calculo el valor correspondiente placa perforada, protoboard, cables , microcontroladores y un 20 \% mas de estimación.
+\item Servicio en la nube, se tomo el valor mensual en el servicio de la pagina hostinger.Se tiene en cuenta que solo 6 meses, dado que los primeros dos meses no se realizan pruebas en la nube.
+\item Viaticos, se considera el consumo de alimentos promedio en un dia.
+\item Alquiler de taller, comprenden los costos de alquiler y de consumo eléctrico por mes.
+\end{itemize}
 
 
 \section{13. Gestión de riesgos}
