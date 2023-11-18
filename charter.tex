@@ -72,6 +72,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.0      & Se completa hasta el punto 5 inclusive                & 31/10/2023 \\ \hline
 2.0      & Se completa hasta el punto 9 inclusive, con correcciones de la version 1.0               & 07/11/2023 \\ \hline
 3.0      & Se completa hasta el punto 12 inclusive, con correcciones de la version 2.0               & 14/11/2023 \\ \hline
+4.0      & Se completa hasta el punto 15 inclusive, con correcciones de la version 3.0               & 21/11/2023 \\ \hline
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -94,7 +95,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un sistema IoT aplicado al  control de consumo eléctrico en viviendas y/o departamentos, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \$ 2444000, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un sistema IoT aplicado al  control de consumo eléctrico en viviendas y/o departamentos, y tendrá un presupuesto preliminar estimado de 625 h de trabajo y \$ 3119000, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -259,7 +260,7 @@ Se pretende aplicar los conocimientos adquiridos para la gestión del proyecto y
 El presente proyecto incluye:
 
 \begin{itemize}
-\item{Desarrollo de la aplicacion IoT( frontend, backend, base de datos ).}
+\item{Desarrollo de la aplicacion IoT( front-end, back-end, base de datos ).}
 \item{Desarrollo de firmware para módulos sensor y transmisor }
 \item{Desarrollo de un prototipo  para el modulo sensor en protoboard o placa perforada}
 \item{Desarrollo de un prototipo para el modulo transmisor ( interface sensores e internet ) en protoboard o placa perforada}
@@ -503,11 +504,11 @@ Las tareas a realizar son las siguientes:
 	\begin{enumerate}
 	\item Confección de un diagrama de la aplicación IoT. (8 hs)
 	\item Confección de un diagrama en bloques del código. (8 hs)
-	\item Desarrollo del código frontend. (36 hs)
-	\item Desarrollo del código backend. (36 hs)
+	\item Desarrollo del código front-end. (36 hs)
+	\item Desarrollo del código back-end. (36 hs)
 	\item Integración de la aplicación en la nube. (12 hs)
-	\item Pruebas individuales del funcionamiento del backend y frontend. (8 hs)
-	\item Pruebas de interconexión del backend y frontend. (16 hs)
+	\item Pruebas individuales del funcionamiento del back-end y front-end. (8 hs)
+	\item Pruebas de interconexión del back-end y front-end. (16 hs)
 	\end{enumerate}
 
 \item Etapa de integración. (48 hs)
@@ -530,22 +531,22 @@ Las tareas a realizar son las siguientes:
 	\item Verificación de la interfaz de usuario. (8 hs)
 	\end{enumerate}	
 	
-\item Documentación. (128 hs)
+\item Documentación. (153 hs)
 	\begin{enumerate}
-	\item camino critico marcado con tareas de color rojo y en trazo grueso de color negro. Un total de 348 hs.
+	\item Documentación de esquemáticos. (8 hs)
 	\item Documentación del código C. (16 hs)
 	\item Documentación de la aplicación IoT. (16 hs)
 	\item Documentación del manual de instalación. (16 hs)
 	\item Documentación del manual de uso. (16 hs)
 	\item Informe de avance del proyecto. (24 hs)
-	\item Memoria técnica del proyecto. (32 hs)
+	\item Memoria técnica del proyecto. (57 hs)
 
 	\end{enumerate}
 
 
 \end{enumerate}
 
-Cantidad total de horas: (600 hs)
+Cantidad total de horas: (625 hs)
 
 \newpage
 
@@ -553,11 +554,11 @@ Cantidad total de horas: (600 hs)
 \label{sec:AoN}
 
 
-Se puede ver el AON en la figura \ref{fig:AoN}:
+Se puede ver el AON en la figura \ref{fig:AoN}, el mismo se confecciono teniendo en cuenta que las tareas :
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=1.1\textwidth]{./Figuras/AONProyecto.pdf}
+\includegraphics[width=1.0 \textwidth, height=.3 \textwidth]{./Figuras/AONProyecto.pdf}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
@@ -566,10 +567,10 @@ Se puede ver el AON en la figura \ref{fig:AoN}:
 Observando  la figura  \ref{fig:AoN} se determinan las siguientes cuestiones:
 
 \begin{itemize}
-
+	\item Las subtareas son todas secuenciales  de acuerdo al orden establecido en la seccion \ref{sec:wbs}.
 	\item El camino critico es marcado con las tareas de color rojo,  flechas de color negro y trazo grueso. La cantidad de horas para finalizar el proyecto por el camino critico es de 348 hs.
-	\item El desarrollo de la aplicación marcado en azul puede demorarse hasta 94 hs respecto del camino critico.
-	\item El desarrollo de las tareas de integración, testing del proyecto y verificación del proyecto marcado en verde puede demorarse hasta 36 hs respecto del camino critico.
+	\item El desarrollo de la aplicación marcado en azul puede demorarse hasta 48 hs respecto del camino critico.
+	\item El desarrollo de las tareas de integración, testing del proyecto y verificación del proyecto marcado en verde puede demorarse hasta 61 hs respecto del camino critico.
 	
 
 \end{itemize}
@@ -584,8 +585,8 @@ En la figura \ref{fig:gantt}, se muestra el diagrama de Gantt del proyecto const
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.17\textheight]{./Figuras/ganttProyecto.pdf}
-\caption{Diagrama de Gantt del proyecto}
+\includegraphics[width=1.0\textwidth, height=.43 \textwidth]{./Figuras/ganttProyecto.pdf}
+\caption{Diagrama de Gantt del proyecto.}
 \label{fig:gantt}
 \end{figure}
 
@@ -596,9 +597,34 @@ Para construir el diagrama de gantt del proyecto se realizaron las siguientes co
 \item Se establecen  los días laborables de lunes a viernes.
 \item Se establecen  los días no laborables los sábados y domingos.
 \item El camino critico es el establecido en color rojo.
-\item El proyecto empieza el día 02/01/2024 y finaliza el 02/08/2024.
-\item Se tomaron los grupos de tareas generales para confeccionar el diagrama, dado que las tareas internas al grupo de tareas son secuenciales, como por ejemplo  la Etapa de integración compuesta por las tareas ``Integración de software y harware"                                      ,``Pruebas generales de software y  hardware".
+\item El proyecto empieza el día 02/01/2024 y finaliza el 16/08/2024.
+\item Se tomaron los grupos de tareas generales para confeccionar el diagrama de Gantt de la figura \ref{fig:gantt}, dado que las tareas internas son secuenciales el detalle de las mismas se puede ver en los diagramas de gantt de las figuras \ref{fig:gantt1}, \ref{fig:gantt2} y \ref{fig:gantt3}.
 \end{itemize}
+
+
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1.0\textwidth, height=.43 \textwidth]{./Figuras/ganttProyecto1.pdf}
+\caption{Diagrama de Gantt de la etapa de Investigación y Materiales necesarios.}
+\label{fig:gantt1}
+\end{figure}
+
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1.0\textwidth, height=.43 \textwidth]{./Figuras/ganttProyecto2.pdf}
+\caption{Diagrama de Gantt de la etapa de Desarrollo de hardware, Desarrollo de firmware y Desarrollo de aplicación.}
+\label{fig:gantt2}
+\end{figure}
+
+
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=1.0\textwidth, height=.43 \textwidth]{./Figuras/ganttProyecto3.pdf}
+\caption{Diagrama de Gantt de la Etapa de integración, Testing del proyecto, Verificación del prototipo y Documentación.}
+\label{fig:gantt3}
+\end{figure}
 
 
 
@@ -624,9 +650,9 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
   
   \multicolumn{1}{|l|}{Horas de ingeniería}  &
-  \multicolumn{1}{c|}{600 h} &
+  \multicolumn{1}{c|}{625 h} &
   \multicolumn{1}{c|}{3000 \$} &
-  \multicolumn{1}{c|}{1200000 \$} \\ \hline
+  \multicolumn{1}{c|}{1875000 \$} \\ \hline
  
  \multicolumn{1}{|l|}{Materiales}  &
   \multicolumn{1}{c|}{2 prototipos} &
@@ -640,7 +666,7 @@ Descripción &
 
   
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{1502000 \$} \\ \hline
+  \multicolumn{1}{c|}{2177000 \$} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -650,8 +676,8 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
 
 
-\multicolumn{1}{|l|}{Viaticos}  &
-  \multicolumn{1}{c|}{154 d} &
+\multicolumn{1}{|l|}{Viáticos}  &
+  \multicolumn{1}{c|}{154 días} &
   \multicolumn{1}{c|}{3000 \$} &
   \multicolumn{1}{c|}{462000 \$} \\ \hline
   
@@ -664,7 +690,7 @@ Descripción &
   \multicolumn{1}{c|}{942000 \$} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-\multicolumn{1}{c|}{2444000 \$} 
+\multicolumn{1}{c|}{3119000 \$} 
    \\ \hline
 \end{tabularx}%
 \caption{Cuadro de costos.}
@@ -675,11 +701,11 @@ Descripción &
 Para construir el cuadro \ref{tab:costos} del proyecto se realizaron las siguientes consideraciones:
 
 \begin{itemize}
-\item Horas de ingeniería, se calculo respecto del sueldo  mensual  $\frac{720000}{30\  dias\ \* 8\ h } \approx 3000\$ $
-\item Materiales, se calculo el valor correspondiente placa perforada, protoboard, cables , microcontroladores y un 20 \% mas de estimación.
-\item Servicio en la nube, se tomo el valor mensual en el servicio de la pagina hostinger.Se tiene en cuenta que solo 6 meses, dado que los primeros dos meses no se realizan pruebas en la nube.
-\item Viaticos, se considera el consumo de alimentos promedio en un dia.
-\item Alquiler de taller, comprenden los costos de alquiler y de consumo eléctrico por mes.
+\item Horas de ingeniería: Se calculo respecto del sueldo  mensual  $\frac{720000}{30\  dias\ \* 8\ h } \approx 3000\$ $
+\item Materiales: Se calculo el valor correspondiente para la placa perforada, protoboard, cables , microcontroladores y un 20 \% mas de estimación.
+\item Servicio en la nube: Se tomo el valor mensual en el servicio de la pagina hostinger. Se tiene en cuenta que solo 6 meses, dado que los primeros dos meses no se realizan pruebas en la nube.
+\item Viáticos: Se considera el consumo de alimentos promedio en un día.
+\item Alquiler de taller: Comprenden los costos de alquiler y de consumo eléctrico por mes.
 \end{itemize}
 
 

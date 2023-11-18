@@ -35,9 +35,9 @@
         <predecessor id="1" predecessor-id="3" type="FS"/>
       </predecessors>
     </task>
-    <task id="5" name="Desarrollo de aplicaci&#xF3;n" note="" work="446400" start="20240123T103000Z" end="20240402T093000Z" work-start="20240124T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="5" name="Desarrollo de aplicaci&#xF3;n" note="" work="446400" start="20240216T093000Z" end="20240426T083000Z" work-start="20240216T093000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
-        <predecessor id="1" predecessor-id="1" type="FS"/>
+        <predecessor id="1" predecessor-id="2" type="FS"/>
       </predecessors>
     </task>
     <task id="6" name="Etapa de integraci&#xF3;n" note="" work="172800" start="20240523T090000Z" end="20240619T093000Z" work-start="20240523T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
@@ -56,13 +56,13 @@
         <predecessor id="1" predecessor-id="7" type="FS"/>
       </predecessors>
     </task>
-    <task id="9" name="Documentaci&#xF3;n" note="" work="460800" start="20240523T090000Z" end="20240802T093000Z" work-start="20240523T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="9" name="Documentaci&#xF3;n" note="" work="550800" start="20240523T090000Z" end="20240816T093000Z" work-start="20240523T090000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="5" type="FS"/>
         <predecessor id="1" predecessor-id="4" type="FS"/>
       </predecessors>
     </task>
-    <task id="10" name="Fin" note="" work="0" start="20240802T093000Z" end="20240802T093000Z" work-start="20240802T093000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
+    <task id="10" name="Fin" note="" work="0" start="20240816T093000Z" end="20240816T093000Z" work-start="20240816T093000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="8" type="FS"/>
         <predecessor id="1" predecessor-id="9" type="FS"/>
