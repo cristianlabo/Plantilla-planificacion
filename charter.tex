@@ -789,8 +789,8 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 	\item El modulo sensor y el modulo transmisor deben ser alimentados con la tension nominal de 220 Vac o en su defecto por una batería de 12 Vdc.
 			
 			\begin{itemize}
-		\item Verificación: Se verificara el correcto funcionamiento del sistema con los modulos alimentado a 220Vac y con una bateria de 12 Vdc.
-			\item Validación: El cliente probara el dispositivo instlando el mismo en su domicilio.
+		\item Verificación: Se verificara el correcto funcionamiento del sistema con los módulos alimentados a 220Vac y con una batería de 12 Vdc.
+			\item Validación: El cliente probara el dispositivo instalado en su domicilio.
 			\end{itemize}
 			
 		\end{enumerate}
@@ -808,8 +808,8 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 		\item La documentación debe contar con un manual de uso.
 		
 		\begin{itemize}
-		\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-		\item Validación: Se pedirá a los usuarios utilizar el sistema y consultando el manual de uso.
+		\item Verificación: Se verificaran los casos de uso típicos del manual con el sistema en funcionamiento.
+		\item Validación: Se pedirá a los usuarios utilizar el sistema consultando el manual de uso.
 		\end{itemize}
 		
 		\end{enumerate}
@@ -822,32 +822,33 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 		\begin{enumerate}
 		\item Se deben realizar pruebas de consumo eléctrico en un domicilio, con al menos dos dispositivos sensores por el período de una semana.
 			\begin{itemize}
-			\item Verificación: 
-			\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+			\item Verificación: Se verificara la correcta comunicacion de los modulos por Bluetooth, como asi tambien el correcto funcionamiento del protocolo MQTT.
+			\item Validación: Se pedirá al usuario probar utilizar el sistema.
 			\end{itemize}
 			
 		\item Se deben contrastar las pruebas de consumo eléctrico con el medidor eléctrico del domicilio.
 			\begin{itemize}
-			\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-			\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+			\item Verificación: Se verificara el consumo eléctrico de cada modulo, midiendo la potencia desde los dispositivos y se contrastara con el consumo del medidor eléctrico.
+			\item Validación: Se pedirá al usuario que corrobore que la medición de consumo eléctrico sea la misma que se visualiza en el medidor eléctrico.
 			\end{itemize}
 		\item Se debe controlar la correcta activación de las alarmas por exceso de consumo.
 		\begin{itemize}
-			\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-			\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+			\item Verificación: Se configuraran alarmas por exceso de consumo eléctrico, luego se verificara la correcta activación de las mismas comparando el consumo del medidor eléctrico.
+			\item Validación: Se pedirá al usuario la configuración de una alarma de exceso de consumo y se verificara desde la activación desde el sistema. 
 			\end{itemize}				
 		\end{enumerate}
 	\item Requerimientos de la interfaz
 		\begin{enumerate}
 			\item El usuario debe poder seleccionar y visualizar el consumo eléctrico general por hora, día, semana y mes.
 				\begin{itemize}
-			\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-			\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+			\item Verificación: Desde la aplicación se verificara el consumo eléctrico por cada periodo temporal y se contrastara con el consumo visualizado desde el medidor.
+			\item Validación: Desde la aplicación se pedirá al usuario la selección y visualización del consumo eléctrico para cada periodo temporal.
 			\end{itemize}
+			
 			\item El usuario debe poder configurar alarmas por exceso de consumo eléctrico.	
-				\begin{itemize}
-			\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-			\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+			\begin{itemize}
+			\item Verificación: Se configuraran alarmas por exceso de consumo desde la aplicación y se corroborara su correcto funcionamiento por simulación de valores.
+			\item Validación: Instalado el sistema se pedirá al usuario la configuración de alarmas de alarmas.
 			\end{itemize}
 		 
 		\end{enumerate}
@@ -858,28 +859,13 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 		
 	\end{enumerate}
 		\begin{itemize}
-			\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-			\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+			\item Verificación: Se verificara la comunicación de los módulos, conectando los mismos y simulando el envió de mensajes por Bluetooth.
+			\item Validación: Se instalara el sistema y se pedirá al usuario que visualice el consumo eléctrico desde el sistema.
 			\end{itemize}
 	
 \end{enumerate}
 
-\begin{consigna}{red}
-Elija al menos diez requerientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
 
-\begin{itemize} 
-\item Req \#1: copiar acá el requerimiento.
-
-\begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
-\end{itemize}
-
-\end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
-
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
@@ -889,27 +875,12 @@ Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos
 Luego de finalizar el proyecto se realizara una reunión final de evaluación , que contemplara las siguientes actividades:
 
 \begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
-	  - Indicar esto y quién financiará los gastos correspondientes.
+	\item El {\authorname}  estará a cargo de verificar y registrar en un archivo de texto si se respetaron los tiempos establecidos para las tareas del proyecto, si fueron necesarias las pruebas realizadas para satisfacer las expectativas del cliente y las posibles mejoras para una posterior actualización del proyecto.
+	\item Se verificara si fue apropiado utilizar los protocolos de comunicación Bluetooth y MQTT frente a otros protocolos de comunicación(ventajas y desventajas), la implementación de la aplicación en la nube frente a la arquitectura on premise y la implementación de sensores y demás componentes físicos del prototipo frente a otras alternativas mas económicas en el mercado.
+	Las tareas antes mencionadas estarán a cargo de \authorname y supervisadas por \supname, las mismas deben registrarse en un archivo de texto para futuras mejoras o actualizaciones del proyecto.
+	\item El acto de agradecimiento estará organizado y financiado por el  \authorname. El acto tendrá por fin agradecer al Director del Trabajo final  \supname por el apoyo económico y de desarrollo , al Sr. Gabriel Garcia por el apoyo logístico brindado, al 
+Ing. Guillermo Tala  por ser el apoyo fundamental en la etapa de software y a la  Sra. Ana Álvarez  por brindar el lugar para realizar las pruebas del proyecto.
 \end{itemize}	  
 	  
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
-
-\begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
-	  - Indicar esto y quién financiará los gastos correspondientes.
-\end{itemize}
-
-\end{consigna}
-
 
 \end{document}
