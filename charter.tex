@@ -533,13 +533,13 @@ Las tareas a realizar son las siguientes:
 	
 \item Documentación. (153 hs)
 	\begin{enumerate}
-	\item Documentación de esquemáticos. (8 hs)
-	\item Documentación del código C. (16 hs)
-	\item Documentación de la aplicación IoT. (16 hs)
-	\item Documentación del manual de instalación. (16 hs)
-	\item Documentación del manual de uso. (16 hs)
-	\item Informe de avance del proyecto. (24 hs)
-	\item Memoria técnica del proyecto. (57 hs)
+	\item Documentación de esquemáticos. (4 hs)
+	\item Documentación del código C. (8 hs)
+	\item Documentación de la aplicación IoT. (8 hs)
+	\item Documentación del manual de instalación. (8 hs)
+	\item Documentación del manual de uso. (8 hs)
+	\item Informe de avance del proyecto. (20 hs)
+	\item Memoria técnica del proyecto. (97 hs)
 
 	\end{enumerate}
 
@@ -597,8 +597,8 @@ Para construir el diagrama de gantt del proyecto se realizaron las siguientes co
 \item Se establecen  los días laborables de lunes a viernes.
 \item Se establecen  los días no laborables los sábados y domingos.
 \item El camino critico es el establecido en color rojo.
-\item El proyecto empieza el día 02/01/2024 y finaliza el 16/08/2024.
-\item Se tomaron los grupos de tareas generales para confeccionar el diagrama de Gantt de la figura \ref{fig:gantt}, dado que las tareas internas son secuenciales el detalle de las mismas se puede ver en los diagramas de gantt de las figuras \ref{fig:gantt1}, \ref{fig:gantt2} y \ref{fig:gantt3}.
+\item El proyecto empieza el día 02/01/2024 y finaliza el 13/08/2024.
+\item Se tomaron los grupos de tareas generales para confeccionar el diagrama de Gantt de la figura \ref{fig:gantt}, dado que las tareas internas son secuenciales como se puede ver en los diagramas de gantt ampliado de las figuras \ref{fig:gantt1}, \ref{fig:gantt2} y \ref{fig:gantt3}.
 \end{itemize}
 
 
@@ -621,7 +621,7 @@ Para construir el diagrama de gantt del proyecto se realizaron las siguientes co
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=1.0\textwidth, height=.43 \textwidth]{./Figuras/ganttProyecto3.pdf}
+\includegraphics[width=0.98\textwidth, height=.43 \textwidth]{./Figuras/ganttProyecto3.pdf}
 \caption{Diagrama de Gantt de la Etapa de integración, Testing del proyecto, Verificación del prototipo y Documentación.}
 \label{fig:gantt3}
 \end{figure}
@@ -777,7 +777,7 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 
 \begin{enumerate}
 	\item Requerimientos funcionales
-		\begin{enumerate}
+		\begin{itemize}
 
 			\item El sistema debe ser capaz de medir el consumo eléctrico por hora, día, semana y mes.
 
@@ -793,10 +793,10 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 			\item Validación: El cliente probara el dispositivo instalado en su domicilio.
 			\end{itemize}
 			
-		\end{enumerate}
+		\end{itemize}
 		
 	\item Requerimientos de documentación
-		\begin{enumerate}
+		\begin{itemize}
 
 		\item La documentación debe contar con un manual de instalación.
 			
@@ -812,14 +812,14 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 		\item Validación: Se pedirá a los usuarios utilizar el sistema consultando el manual de uso.
 		\end{itemize}
 		
-		\end{enumerate}
+		\end{itemize}
 		
 		
 		
 	
 			
 	\item Requerimiento de testing
-		\begin{enumerate}
+		\begin{itemize}
 		\item Se deben realizar pruebas de consumo eléctrico en un domicilio, con al menos dos dispositivos sensores por el período de una semana.
 			\begin{itemize}
 			\item Verificación: Se verificara la correcta comunicacion de los modulos por Bluetooth, como asi tambien el correcto funcionamiento del protocolo MQTT.
@@ -836,9 +836,9 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 			\item Verificación: Se configuraran alarmas por exceso de consumo eléctrico, luego se verificara la correcta activación de las mismas comparando el consumo del medidor eléctrico.
 			\item Validación: Se pedirá al usuario la configuración de una alarma de exceso de consumo y se verificara desde la activación desde el sistema. 
 			\end{itemize}				
-		\end{enumerate}
+		\end{itemize}
 	\item Requerimientos de la interfaz
-		\begin{enumerate}
+		\begin{itemize}
 			\item El usuario debe poder seleccionar y visualizar el consumo eléctrico general por hora, día, semana y mes.
 				\begin{itemize}
 			\item Verificación: Desde la aplicación se verificara el consumo eléctrico por cada periodo temporal y se contrastara con el consumo visualizado desde el medidor.
@@ -851,13 +851,13 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 			\item Validación: Instalado el sistema se pedirá al usuario la configuración de alarmas de alarmas.
 			\end{itemize}
 		 
-		\end{enumerate}
+		\end{itemize}
 	
 	\item Requerimientos interoperabilidad
-	\begin{enumerate}
+	\begin{itemize}
 		\item Los dispositivos sensores deben poder comunicarse via Bluetooth con el modulo transmisor.
 		
-	\end{enumerate}
+	\end{itemize}
 		\begin{itemize}
 			\item Verificación: Se verificara la comunicación de los módulos, conectando los mismos y simulando el envió de mensajes por Bluetooth.
 			\item Validación: Se instalara el sistema y se pedirá al usuario que visualice el consumo eléctrico desde el sistema.
