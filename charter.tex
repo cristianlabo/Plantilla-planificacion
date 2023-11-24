@@ -260,7 +260,7 @@ Se pretende aplicar los conocimientos adquiridos para la gestión del proyecto y
 El presente proyecto incluye:
 
 \begin{itemize}
-\item{Desarrollo de la aplicacion IoT( front-end, back-end, base de datos ).}
+\item{Desarrollo de la aplicacion IoT( frontend, backend, base de datos ).}
 \item{Desarrollo de firmware para módulos sensor y transmisor }
 \item{Desarrollo de un prototipo  para el modulo sensor en protoboard o placa perforada}
 \item{Desarrollo de un prototipo para el modulo transmisor ( interface sensores e internet ) en protoboard o placa perforada}
@@ -504,11 +504,11 @@ Las tareas a realizar son las siguientes:
 	\begin{enumerate}
 	\item Confección de un diagrama de la aplicación IoT. (8 hs)
 	\item Confección de un diagrama en bloques del código. (8 hs)
-	\item Desarrollo del código front-end. (36 hs)
-	\item Desarrollo del código back-end. (36 hs)
+	\item Desarrollo del código del frontend. (36 hs)
+	\item Desarrollo del código del backend. (36 hs)
 	\item Integración de la aplicación en la nube. (12 hs)
-	\item Pruebas individuales del funcionamiento del back-end y front-end. (8 hs)
-	\item Pruebas de interconexión del back-end y front-end. (16 hs)
+	\item Pruebas individuales del funcionamiento del backend y frontend. (8 hs)
+	\item Pruebas de interconexión del backend y frontend. (16 hs)
 	\end{enumerate}
 
 \item Etapa de integración. (48 hs)
@@ -558,7 +558,7 @@ Se puede ver el AON en la figura \ref{fig:AoN}, el mismo se confecciono teniendo
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=1.0 \textwidth, height=.3 \textwidth]{./Figuras/AONProyecto.pdf}
+\includegraphics[width=0.5 \textwidth, height=1.1 \textwidth]{./Figuras/AON.pdf}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
@@ -568,7 +568,7 @@ Observando  la figura  \ref{fig:AoN} se determinan las siguientes cuestiones:
 
 \begin{itemize}
 	\item Las subtareas son todas secuenciales  de acuerdo al orden establecido en la seccion \ref{sec:wbs}.
-	\item El camino critico es marcado con las tareas de color rojo,  flechas de color negro y trazo grueso. La cantidad de horas para finalizar el proyecto por el camino critico es de 348 hs.
+	\item El camino critico se indica con las tareas de color rojo,  flechas de color rojo y trazo grueso. La cantidad de horas para finalizar el proyecto por el camino critico es de 348 hs.
 	\item El desarrollo de la aplicación marcado en azul puede demorarse hasta 48 hs respecto del camino critico.
 	\item El desarrollo de las tareas de integración, testing del proyecto y verificación del proyecto marcado en verde puede demorarse hasta 61 hs respecto del camino critico.
 	
@@ -701,11 +701,11 @@ Descripción &
 Para construir el cuadro \ref{tab:costos} del proyecto se realizaron las siguientes consideraciones:
 
 \begin{itemize}
-\item Horas de ingeniería: Se calculo respecto del sueldo  mensual  $\frac{720000}{30\  dias\ \* 8\ h } \approx 3000\$ $
-\item Materiales: Se calculo el valor correspondiente para la placa perforada, protoboard, cables , microcontroladores y un 20 \% mas de estimación.
-\item Servicio en la nube: Se tomo el valor mensual en el servicio de la pagina hostinger. Se tiene en cuenta que solo 6 meses, dado que los primeros dos meses no se realizan pruebas en la nube.
-\item Viáticos: Se considera el consumo de alimentos promedio en un día.
-\item Alquiler de taller: Comprenden los costos de alquiler y de consumo eléctrico por mes.
+\item Horas de ingeniería: se calculo respecto del sueldo  mensual  $\frac{720000}{30\  dias\ \* 8\ h } \approx 3000\$ $
+\item Materiales: se calculo el valor correspondiente para la placa perforada, protoboard, cables , microcontroladores y un 20 \% mas de estimación.
+\item Servicio en la nube: se tomo el valor mensual en el servicio de la pagina hostinger. Se tiene en cuenta que solo 6 meses, dado que los primeros dos meses no se realizan pruebas en la nube.
+\item Viáticos: se considera el consumo de alimentos promedio en un día.
+\item Alquiler de taller: comprenden los costos de alquiler y de consumo eléctrico por mes.
 \end{itemize}
 
 
@@ -715,19 +715,19 @@ Para construir el cuadro \ref{tab:costos} del proyecto se realizaron las siguien
 Los riesgos identificados en el proyecto son los siguientes:
 
 
-Riesgo 1: No conseguir los componentes de hardware necesarios  para el proyecto.
+Riesgo 1: no conseguir los componentes de hardware necesarios  para el proyecto.
 \begin{itemize}
 	\item Severidad (S): 8, debido a que los componentes de hardware son necesarios para la implementación del proyecto en los plazos de tiempo estipulados. 
 	\item Ocurrencia (O):3, debido a que los componentes son productos de alta demanda en el mercado local.
 \end{itemize}
 
-Riesgo 2: Comprar un componente defectuoso o roto.
+Riesgo 2: comprar un componente defectuoso o roto.
 \begin{itemize}
 	\item Severidad (S): 5, porque es necesario el correcto funcionamiento de los componentes  para la integración de los mismos al proyecto.
 	\item Ocurrencia (O): 1,porque los componentes utilizados tiene un control de calidad muy alto.
 \end{itemize}
 
-Riesgo 3: Exceso en los tiempos de trabajo.
+Riesgo 3: exceso en los tiempos de trabajo.
 \begin{itemize}
 	\item Severidad (S): 10, de no cumplirse con los tiempos se pondría en riesgo la finalización del proyecto en el tiempo planificado. 
 	\item Ocurrencia (O): 4, porque hay desarrollos sobre los que no se tienen conocimientos, o el conocimiento es bajo.
@@ -749,25 +749,25 @@ Exceso en los tiempos de trabajo       & 10  & 4  &  40   &   10 &  1 & 10     \
 \end{table}
 
 Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 20.
+se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 20.
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 
 Plan de mitigación de los riesgos que originalmente excedían el PRN máximo establecido:
  
-Riesgo 1: No conseguir los componentes de hardware necesarios  para el proyecto en los locales de venta.
+Riesgo 1: no conseguir los componentes de hardware necesarios  para el proyecto en los locales de venta. Para mitigar este riesgo se realizará el correspondiente encargo de los componentes necesarios con suficiente antelación 
 
 
 Severidad (S): 8, debido a que los componentes de hardware son necesarios para la implementación del proyecto en los plazos establecidos.  
 
-Probabilidad de Ocurrencia (O):  1,debido a que  se realizará el correspondiente encargo de los componentes necesarios con suficiente antelación.
+Probabilidad de Ocurrencia (O):  1, debido a que los componentes son productos de alta demanda en el mercado local.
  
-Riesgo 3: Exceso en los tiempos de trabajo.
+Riesgo 3: exceso en los tiempos de trabajo. Para mitigar este riesgo se planificará de manera apropiada la estipulación de tiempos para cada tarea del proyecto
 
-Severidad (S): 10, de no cumplirse con los tiempos se pondría en riesgo la finalización del proyecto en el tiempo planificado.
+Severidad (S): 10, de no cumplirse con los tiempos se pondría en riesgo la finalización del proyecto en el tiempo planificado. 
 
-Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la estipulación de tiempos para cada tarea  del proyecto.
+Probabilidad de Ocurrencia (O): 1, porque hay desarrollos sobre los que no se tienen conocimientos, o el conocimiento es bajo.
 
 
 
@@ -782,15 +782,15 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 			\item El sistema debe ser capaz de medir el consumo eléctrico por hora, día, semana y mes.
 
 			\begin{itemize}
-			\item Verificación: Se medirá el consumo eléctrico y se contrastara con las mediciones de un multímetro eléctrico y una pinza amperímetro.
-			\item Validación: El cliente verificara el consumo eléctrico y contratara el valor con el medidor eléctrico de su domicilio.
+			\item Verificación: se medirá el consumo eléctrico y se contrastará con las mediciones de un multímetro eléctrico y una pinza amperímetrica.
+			\item Validación: el cliente verificará el consumo eléctrico y contratará el valor con el medidor eléctrico de su domicilio.
 			\end{itemize}
 
 	\item El modulo sensor y el modulo transmisor deben ser alimentados con la tension nominal de 220 Vac o en su defecto por una batería de 12 Vdc.
 			
 			\begin{itemize}
-		\item Verificación: Se verificara el correcto funcionamiento del sistema con los módulos alimentados a 220Vac y con una batería de 12 Vdc.
-			\item Validación: El cliente probara el dispositivo instalado en su domicilio.
+		\item Verificación: se verificará el correcto funcionamiento del sistema con los módulos alimentados a 220Vac y con una batería de 12 Vdc.
+			\item Validación: El cliente probará el dispositivo instalado en su domicilio.
 			\end{itemize}
 			
 		\end{itemize}
@@ -801,15 +801,15 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 		\item La documentación debe contar con un manual de instalación.
 			
 		\begin{itemize}
-		\item Verificación: Se verificaran los pasos de instalación siguiendo el manual, en caso de  corresponder se rectificara el mismo. 
-		\item Validación: Se instalara un prototipo, siguiendo los pasos detallados en el manual y se corroborara el correcto funcionamiento del sistema.
+		\item Verificación: se verificarán los pasos de instalación siguiendo el manual, en caso de  corresponder se rectificara el mismo. 
+		\item Validación: se instalara un prototipo, siguiendo los pasos detallados en el manual y se corroborara el correcto funcionamiento del sistema.
 		\end{itemize}
 			
 		\item La documentación debe contar con un manual de uso.
 		
 		\begin{itemize}
-		\item Verificación: Se verificaran los casos de uso típicos del manual con el sistema en funcionamiento.
-		\item Validación: Se pedirá a los usuarios utilizar el sistema consultando el manual de uso.
+		\item Verificación: se verificarán los casos de uso típicos del manual con el sistema en funcionamiento.
+		\item Validación: se pedirá a los usuarios utilizar el sistema consultando el manual de uso.
 		\end{itemize}
 		
 		\end{itemize}
@@ -822,45 +822,45 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 		\begin{itemize}
 		\item Se deben realizar pruebas de consumo eléctrico en un domicilio, con al menos dos dispositivos sensores por el período de una semana.
 			\begin{itemize}
-			\item Verificación: Se verificara la correcta comunicacion de los modulos por Bluetooth, como asi tambien el correcto funcionamiento del protocolo MQTT.
-			\item Validación: Se pedirá al usuario probar utilizar el sistema.
+			\item Verificación: se verificará la correcta comunicacion de los modulos por Bluetooth, como asi tambien el correcto funcionamiento del protocolo MQTT.
+			\item Validación: se pedirá al usuario utilizar el sistema.
 			\end{itemize}
 			
 		\item Se deben contrastar las pruebas de consumo eléctrico con el medidor eléctrico del domicilio.
 			\begin{itemize}
-			\item Verificación: Se verificara el consumo eléctrico de cada modulo, midiendo la potencia desde los dispositivos y se contrastara con el consumo del medidor eléctrico.
-			\item Validación: Se pedirá al usuario que corrobore que la medición de consumo eléctrico sea la misma que se visualiza en el medidor eléctrico.
+			\item Verificación: se verificará el consumo eléctrico de cada modulo, midiendo la potencia desde los dispositivos y se contrastara con el consumo del medidor eléctrico.
+			\item Validación: se pedirá al usuario que corrobore que la medición de consumo eléctrico sea la misma que se visualiza en el medidor eléctrico.
 			\end{itemize}
 		\item Se debe controlar la correcta activación de las alarmas por exceso de consumo.
 		\begin{itemize}
-			\item Verificación: Se configuraran alarmas por exceso de consumo eléctrico, luego se verificara la correcta activación de las mismas comparando el consumo del medidor eléctrico.
-			\item Validación: Se pedirá al usuario la configuración de una alarma de exceso de consumo y se verificara desde la activación desde el sistema. 
+			\item Verificación: se configuraran alarmas por exceso de consumo eléctrico. Luego se verificará la correcta activación de las mismas comparando el consumo del medidor eléctrico.
+			\item Validación: se pedirá al usuario la configuración de una alarma de exceso de consumo y se verificará la activación desde el sistema. 
 			\end{itemize}				
 		\end{itemize}
 	\item Requerimientos de la interfaz
 		\begin{itemize}
 			\item El usuario debe poder seleccionar y visualizar el consumo eléctrico general por hora, día, semana y mes.
 				\begin{itemize}
-			\item Verificación: Desde la aplicación se verificara el consumo eléctrico por cada periodo temporal y se contrastara con el consumo visualizado desde el medidor.
-			\item Validación: Desde la aplicación se pedirá al usuario la selección y visualización del consumo eléctrico para cada periodo temporal.
+			\item Verificación: desde la aplicación se verificará el consumo eléctrico por cada periodo temporal y se contrastara con el consumo visualizado desde el medidor.
+			\item Validación: desde la aplicación se pedirá al usuario la selección y visualización del consumo eléctrico para cada periodo temporal.
 			\end{itemize}
 			
 			\item El usuario debe poder configurar alarmas por exceso de consumo eléctrico.	
 			\begin{itemize}
-			\item Verificación: Se configuraran alarmas por exceso de consumo desde la aplicación y se corroborara su correcto funcionamiento por simulación de valores.
-			\item Validación: Instalado el sistema se pedirá al usuario la configuración de alarmas de alarmas.
+			\item Verificación: se configuraran alarmas por exceso de consumo desde la aplicación y se corroborara su correcto funcionamiento por simulación de valores.
+			\item Validación: instalado el sistema se pedirá al usuario la configuración de alarmas de alarmas.
 			\end{itemize}
 		 
 		\end{itemize}
 	
 	\item Requerimientos interoperabilidad
 	\begin{itemize}
-		\item Los dispositivos sensores deben poder comunicarse via Bluetooth con el modulo transmisor.
+		\item Los dispositivos sensores deben poder comunicarse via Bluetooth con el módulo transmisor.
 		
 	\end{itemize}
 		\begin{itemize}
-			\item Verificación: Se verificara la comunicación de los módulos, conectando los mismos y simulando el envió de mensajes por Bluetooth.
-			\item Validación: Se instalara el sistema y se pedirá al usuario que visualice el consumo eléctrico desde el sistema.
+			\item Verificación: se verificará la comunicación de los módulos, conectando los mismos y simulando el envió de mensajes por Bluetooth.
+			\item Validación: se instalara el sistema y se pedirá al usuario que visualice el consumo eléctrico desde el sistema.
 			\end{itemize}
 	
 \end{enumerate}
@@ -872,13 +872,13 @@ Probabilidad de Ocurrencia (O): 1, porque se planificará de manera apropiada la
 
 
 
-Luego de finalizar el proyecto se realizara una reunión final de evaluación , que contemplara las siguientes actividades:
+Luego de finalizar el proyecto se realizará una reunión final de evaluación , que contemplara las siguientes actividades:
 
 \begin{itemize}
 	\item El {\authorname}  estará a cargo de verificar y registrar en un archivo de texto si se respetaron los tiempos establecidos para las tareas del proyecto, si fueron necesarias las pruebas realizadas para satisfacer las expectativas del cliente y las posibles mejoras para una posterior actualización del proyecto.
-	\item Se verificara si fue apropiado utilizar los protocolos de comunicación Bluetooth y MQTT frente a otros protocolos de comunicación(ventajas y desventajas), la implementación de la aplicación en la nube frente a la arquitectura on premise y la implementación de sensores y demás componentes físicos del prototipo frente a otras alternativas mas económicas en el mercado.
-	Las tareas antes mencionadas estarán a cargo de \authorname y supervisadas por \supname, las mismas deben registrarse en un archivo de texto para futuras mejoras o actualizaciones del proyecto.
-	\item El acto de agradecimiento estará organizado y financiado por el  \authorname. El acto tendrá por fin agradecer al Director del Trabajo final  \supname por el apoyo económico y de desarrollo , al Sr. Gabriel Garcia por el apoyo logístico brindado, al 
+	\item Se verificará si fue apropiado utilizar los protocolos de comunicación Bluetooth y MQTT frente a otros protocolos de comunicación( ventajas y desventajas), la implementación de la aplicación en la nube frente a la arquitectura on premise y la implementación de sensores y demás componentes físicos del prototipo frente a otras alternativas mas económicas en el mercado.
+	Las tareas antes mencionadas estarán a cargo de {\authorname} y supervisadas por \supname. Las mismas deben registrarse en un archivo de texto para futuras mejoras o actualizaciones del proyecto.
+	\item El acto de agradecimiento estará organizado y financiado por el  {\authorname}. El acto tendrá por fin agradecer al Director del Trabajo final  {\supname} por el apoyo económico y de desarrollo, al Sr. Gabriel Garcia por el apoyo logístico brindado, al 
 Ing. Guillermo Tala  por ser el apoyo fundamental en la etapa de software y a la  Sra. Ana Álvarez  por brindar el lugar para realizar las pruebas del proyecto.
 \end{itemize}	  
 	  
